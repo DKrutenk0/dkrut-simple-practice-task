@@ -24,6 +24,7 @@ module Web
       def tap_share_and_send
         tap_submit
         wait_until_sending_email_notification_text_field_invisible
+        has_no_xpath?('//*[contains(text(), "Sending email now")]')
       end
     end
   end

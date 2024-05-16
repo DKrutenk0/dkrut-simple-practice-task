@@ -5,16 +5,16 @@ Given("I am on the Login page") do
   $logger.info("Open login page")
 end
 
-And("I use {string} method on {string} with member data") do |method_name, page_name|
+When("I use {string} method on {string} with member data") do |method_name, page_name|
   get_page(page_name).send(method_name.to_sym, @test_member_data)
   $logger.info("Triggered '#{method_name}' method on '#{page_name}' with member data: \n\n #{@test_member_data}")
 end
 
-And("I use {string} method on {string}") do |method_name, page_name|
+When("I use {string} method on {string}") do |method_name, page_name|
   get_page(page_name).send(method_name.to_sym)
 end
 
-And("I use {string} method on {string} using {string} value") do |method_name, page_name, value|
+When("I use {string} method on {string} using {string} value") do |method_name, page_name, value|
   get_page(page_name).send(method_name.to_sym, value)
   $logger.info("Triggered '#{method_name}' method on '#{page_name}' with '#{value}' value")
 end

@@ -1,4 +1,4 @@
-require_relative '../../init_helper.rb'
+require_relative '../../features/support/config/init_helper.rb'
 
 Given("I am on the Login page") do
   Web::Pages::LoginPage.new.wait_for_page_load

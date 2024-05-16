@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
+require 'logger'
+
+$logger = Logger.new(STDOUT)
+
 Before do
-  $logger = Tools::Log
   @constants = Constants::Random
 end
 

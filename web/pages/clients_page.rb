@@ -15,7 +15,6 @@ module Web
 
       def tap_clients
         wait_until_review_and_send_button_invisible
-        # element_visible?(:xpath, '//button[text()="Review & Send"]', 15)
         has_no_xpath?('//button[text()="Review & Send"]')
         clients_nav_button.click
       end

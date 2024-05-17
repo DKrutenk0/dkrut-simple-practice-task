@@ -1,12 +1,10 @@
 # frozen_string_literal: true
-# features/support/config/init_helper.rb
 
 require_relative 'hooks.rb'
 require 'site_prism'
 require 'faker'
 require 'rspec'
 require 'capybara/cucumber'
-require 'capybara/dsl'
 
 require_relative '../../../Tools/asserts'
 

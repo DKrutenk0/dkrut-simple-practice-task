@@ -10,6 +10,12 @@ module Web
         wait = Selenium::WebDriver::Wait.new(timeout: timeout)
         wait.until { find(type, element).visible? }
       end
+
+      def wait_until(max_wait_time = Capybara.default_max_wait_time)
+        Timeout.timeout(max_wait_time) do
+          sleep(0.2) until yield
+        end
+      end
     end
   end
 end

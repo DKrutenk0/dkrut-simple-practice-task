@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-# features/support/config/hooks.rb
 
 require 'logger'
 

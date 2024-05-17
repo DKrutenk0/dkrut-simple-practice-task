@@ -16,7 +16,7 @@ module Web
       alias tap_submit tap_continue
 
       def tap_continue_to_email
-        element_visible?(:xpath, '//a[@href="/practice_settings/note_templates/library"]', 15)
+        wait_until{ element_visible?(:xpath, '//a[@href="/practice_settings/note_templates/library"]', 15) }
         tap_continue
       end
 

@@ -1,1 +1,1 @@
-default: --publish-quiet --require support/env.rb
+default: --publish-quiet
